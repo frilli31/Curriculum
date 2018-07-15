@@ -16,9 +16,7 @@ script:
 - xelatex Curricolum
 after_failure:
 - cat Curricolum.log
-   
-before_deploy:
-- git fetch --tags  
+    
 deploy:
   provider: releases
   skip_cleanup: true
