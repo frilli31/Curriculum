@@ -1,0 +1,30 @@
+language:
+- generic
+dist: trusty
+sudo: true
+addons:
+  apt:
+    packages:
+    - texlive-latex-extra
+    - texlive-xetex
+    - latexmk
+    - texlive-fonts-recommended
+    - texlive-lang-italian
+    - fonts-lmodern
+    - latex-xcolor
+script:
+- xelatex Curricolum
+after_failure:
+- cat Curricolum.log
+   
+before_deploy:
+- git fetch --tags  
+deploy:
+  provider: releases
+  skip_cleanup: true
+  api_key:
+    secure: L/knlGe4zx8MpY+PdluvGgBmmrf1oAy1+90VAjuAxVkCqSjQuUlkicxYfp5PMWkjWAlmyFLMUw2lGOaJzlQ+6dp9jp0gH7+MOkt6q/1iN+Y8x1wstb14Q5X987hgQkHfoIy4BOCfzRAcV2QqBvXl8UZT1eHfZ+j0r9pdnxAebpHLUDltuVhYnr+svTQb4ylEiroSCYi0tvdFL89ZDCvVUNFPj0d8z7SVKFdcPF3WkK4SYo+sIMxx8zAQG/BPcRCWesdm1jcF1yk0z/IP+F6ehrifdKL34DMTLHMqnJuX+JKm0oO3OEiGVMCr9YY34hf2NjZVV33Zm/1vO6WbHoThubJRfOXDnjPqZXOYi7VapVx3SmbRsuIoVzPQaqGekAcLHBTXSP5ZoJ9BY0O54qsK6tcYUedcp6ez05d0Vw7E6IfpBzBl5e/TI894bvvxx+jG9NQUA7ZLkhDecvgop5yVX3WT5thY8/0E8U4O8ORS6RDFubeIyz3faVd9WJo+W+CekB6X77fIvormIwT7JmgJ41gpzIUC+zycFPD8XlF8bKYC3J4A4F72G0e4Hp5dXuAP/GooX1L3+ozDjc2kxLupN2qMavw6c7dIhj37H5DvvoPkdWfNEY0eDEJgNxznY1uvxYxmaxvsATvSicIrEDEUYBQyIlMIjRZwf5HK2+ClQ10=
+  file: Curricolum.pdf
+  on:
+    all_branches: true
+    tags: true

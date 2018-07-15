@@ -1,0 +1,32 @@
+\newcommand{\head}{
+	%--------------------TITLE-------------
+	\par{\centering
+		\huge{ \name{} \textsc{\surname{}}}
+		\begin{figure}[h!]
+			\centering
+			\includegraphics{img/foto_tessera}
+		\end{figure}
+		\bigskip\par
+	}
+}
+
+\newcommand{\personalData}[2]{\textsc{#1:} & #2 \\}
+
+\newcommand{\workExperience}[4]{
+		\begin{tabular}[c]{@{}r@{}}
+			from \textsc{#1}\\
+			to \textsc{#2}\\
+		\end{tabular}
+	& 
+	\begin{tabular}{@{}p{10cm}@{}}
+		#3 \\
+		\footnotesize{#4} \\
+	\end{tabular} \\
+	\multicolumn{2}{c}{} \\
+}
+
+\newcommand{\education}[3]{
+	 \textsc{#1} & #2 \\
+	 &	#3 \\
+	 \multicolumn{2}{c}{} \\
+}
