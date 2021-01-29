@@ -20,8 +20,7 @@ after_failure:
 deploy:
   provider: releases
   skip_cleanup: true
-  api_key:
-    secure: cWQ9sW0ZI4osXgskb1pavwWckMPhYilN2Z0EfsIqNYxtHObJZaDqb33NWc4TOvdRtmOo1ovvJ7X56A3gepsY4LtfEbfMtbVGm1f8qO2e1m4+p3Clfu4MSr1V9Tg2fKbsiwvUs6qp6UX0bMmB9OQEJ7v9vrD7L+gzyLhJbJ1uUHvsiJaDHnU7GIGKrMAriaqWiId3Vo9joSDpBhbhTQNh5THaO/y+BzWh9PDbrKgaln3A9v9osw/YOtAqP4yG0d7jpIqI7uMlFEVr50Qd+DbKTaJrr9faoKQ27pFXzIX6xy5s6P1JhSYLCIORs674OMo0IAIV96AFaimvOYmE2MAIdbE0AewGB3OElwznq3zLt+ULKqMtJEW1F/WOaWzlDGsIcZprhhYRPJjGFKY+70eL1Q3RgXGHVtJDQjtDfrWvPkN/OPk8uVsn5UFwUnnvz9yg6FltIszL1q/IblsUx0ecK0aGZJdbITPQg/yIu5/H/jrHaTngRe43zO25wBdPsg/2E0nwtqOB8EQoJn0OX0lpvxmlHwAoDQLIC80AVoq7fPZoS1y9suswzsBhd5KdJcUGb5T97iFjI9r3i1D9Gcm+cYIzaO5F7/E+w/zuQuRlwXLmUDUejKhX7putBSaOLdrBmm3bNyFIxnm2VIi4/21Jh34wpvcm3xWtiKouZQiPriQ=
+  api_key: $GITHUB_TOKEN
   file: Curriculum.pdf
   on:
     branch: master
