@@ -1,2 +1,2 @@
 # Curriculum
-[![Build Status](https://travis-ci.org/frilli31/Curriculum.svg?branch=master)](https://travis-ci.org/frilli31/Curriculum)
+[![Build Status](https://travis-ci.com/frilli31/Curriculum.svg?branch=master)](https://travis-ci.com/frilli31/Curriculum)
